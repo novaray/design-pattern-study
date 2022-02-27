@@ -1,4 +1,4 @@
-package io.crscube.skkim.singleton;
+package io.crscube.skkim._01_singleton;
 
 /**
  * Created by skkim on 2022/02/26.

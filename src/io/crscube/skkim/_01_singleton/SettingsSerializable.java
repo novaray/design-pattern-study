@@ -1,4 +1,4 @@
-package io.crscube.skkim.singleton;
+package io.crscube.skkim._01_singleton;
 
 import java.io.Serializable;
 
