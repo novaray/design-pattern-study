@@ -6,11 +6,11 @@ package io.crscube.skkim._02_factorymethod._02_after;
 public class Client {
     public static void main(String[] args) {
         final Client client = new Client();
+        client.print(new WhiteShipFactory(), "whiteShip", "skkim@skkim.com");
+        client.print(new BlackShipFactory(), "blackShip", "skkim@skkim.com");
+    }
 
-        final Ship whiteShip = new WhiteShipFactory().orderShip("whiteShip", "novaray@naver.com");
-        System.out.println(whiteShip);
-
-        final Ship blackShip = new BlackShipFactory().orderShip("blackShip", "novaray@naver.com");
-        System.out.println(blackShip);
+    private void print(ShipFactory shipFactory, String name, String email) {
+        System.out.println(shipFactory.orderShip(name, email));
     }
 }

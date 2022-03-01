@@ -15,20 +15,9 @@ public interface ShipFactory {
 
     Ship createShip();
 
-    private void validate(String name, String email) {
-        if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("배 이름을 지어주세요.");
-        }
-        if (email == null || email.isBlank()) {
-            throw new IllegalArgumentException("이메일을 입력해주세요.");
-        }
-    }
+    void validate(String name, String email);
 
-    private void prepareFor(String name) {
-        System.out.println(name + " 만들 준비 중");
-    }
+    void prepareFor(String name);
 
-    private void sendEmailTo(String email, Ship ship) {
-        System.out.println(ship.getName() + " 다 만들었습니다.");
-    }
+    void sendEmailTo(String email, Ship ship);
 }
